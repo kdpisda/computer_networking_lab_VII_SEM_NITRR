@@ -3,14 +3,14 @@
 import java.net.*;
 import java.io.*;
 
-public class Client {
+public class TCPCalculatorClient {
     // initialize socket and input output streams
     private Socket socket = null;
     private BufferedReader input = null;
     private DataOutputStream out = null;
 
     // constructor to put ip address and port
-    public Client(String address, int port) {
+    public TCPCalculatorClient(String address, int port) {
         // establish a connection
         try {
             socket = new Socket(address, port);
@@ -52,6 +52,6 @@ public class Client {
     }
 
     public static void main(String args[]) {
-        Client client = new Client("localhost", 8000);
+        TCPCalculatorClient client = new TCPCalculatorClient("localhost", 8000);
     }
 }
